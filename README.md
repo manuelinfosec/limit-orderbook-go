@@ -1,8 +1,7 @@
-# golang-limit-orderbook
-A simple program written in Golang to implement Level 2 orderbook and matching algorithm
+# limit-orderbook-go
 
-It creates 5 standalone orderbook instances and fill up 1 million order per order type per ticker via goroutines, totaling 10 million limit order objects. Afterwards, the program attempts to run matching executions simultaneously across tickers.
+A Golang implementation of a Level 2 order book and matching engine.  
 
-It runs about 45 seconds to finish both processes. 25 seconds dedicated to test limit order data filling and 20 seconds for matching executions.
+The program initializes five independent order book instances and populates each with one million limit orders per order type per ticker using goroutines—resulting in a total of 10 million orders. Once populated, it concurrently executes order matching across all tickers.  
 
-Roughly 400K order insertions/sec and 500K order fulfillments/sec on M1 Pro CPU. Pretty good!
+Execution time is approximately 45 seconds, with 25 seconds allocated to order insertion and 20 seconds to matching execution. Performance benchmarks on an M1 Pro CPU indicate speeds of around 400K order insertions per second and 500K order fulfillments per second.
