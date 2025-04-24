@@ -119,7 +119,7 @@ func addTestLimitOrder(wg *sync.WaitGroup, ob *entities.OrderBook, ticker string
 			isBid)       // Boolean flag indicating if the order is a bid (true) or an ask (false).
 
 		// The following print statement is commented out.
-		// It can be enabled for debugging to track each created limit order.
+		// It mostly for debugging to track each created limit order.
 		// fmt.Printf("Created limit order - ticker: %s price: %s quantity: %d isBid: %t \n", ticker, priceString, quantity, isBid)
 	}
 
